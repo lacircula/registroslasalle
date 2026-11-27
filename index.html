@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIGE | Incidencias escolares</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div><strong>SIGE</strong><small>Convivencia escolar</small></div>
+      </div>
+      <div class="profile">
+        <div class="avatar">DE</div>
+        <div><strong>Cuenta de prueba</strong><small>Vista de demostración</small></div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <button class="nav-link active" data-view="dashboard"><span>▦</span> Resumen</button>
+        <button class="nav-link" data-view="report"><span>＋</span> Nuevo reporte</button>
+        <button class="nav-link" data-view="students"><span>♙</span> Alumnos</button>
+        <button class="nav-link" data-view="followup"><span>☷</span> Seguimiento</button>
+      </nav>
+      <div class="sidebar-note">Prototipo inicial<br><small>Los datos mostrados son ficticios.</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+        <div><span class="eyebrow">PLATAFORMA ESCOLAR</span><h1 id="pageTitle">Resumen general</h1></div>
+        <div class="top-actions"><span class="status-dot"></span><span>Modo demostración</span></div>
+      </header>
+
+      <section class="view active" id="dashboard">
+        <div class="welcome">
+          <div><span class="eyebrow light">PANEL DE CONTROL</span><h2>Seguimiento de convivencia</h2><p>Consulta los registros y da seguimiento a las situaciones escolares.</p></div>
+          <div class="welcome-icon">✦</div>
+        </div>
+        <div class="stats">
+          <article class="stat-card"><div class="stat-icon blue">▤</div><span>Reportes registrados</span><strong id="reportCount">48</strong><small>En el ciclo escolar de prueba</small></article>
+          <article class="stat-card"><div class="stat-icon cyan">♙</div><span>Alumnos con reportes</span><strong>12</strong><small>Dato ilustrativo</small></article>
+          <article class="stat-card"><div class="stat-icon amber">◷</div><span>Pendientes de atención</span><strong>7</strong><small>Requieren seguimiento</small></article>
+          <article class="stat-card"><div class="stat-icon green">✓</div><span>Atendidos</span><strong>41</strong><small>Dato ilustrativo</small></article>
+        </div>
+        <div class="content-grid">
+          <article class="panel">
+            <div class="panel-heading"><div><h3>Actividad reciente</h3><p>Últimos registros de ejemplo</p></div><span class="pill">Ficticio</span></div>
+            <div class="activity-list">
+              <div class="activity"><div class="activity-mark">1A</div><div class="activity-copy"><strong>Alumno de ejemplo 01</strong><span>Conducta disruptiva · 1° A</span></div><span class="tag pending">Pendiente</span></div>
+              <div class="activity"><div class="activity-mark">2B</div><div class="activity-copy"><strong>Alumno de ejemplo 02</strong><span>Uso inadecuado de dispositivos · 2° B</span></div><span class="tag progress">En seguimiento</span></div>
+              <div class="activity"><div class="activity-mark">3A</div><div class="activity-copy"><strong>Alumno de ejemplo 03</strong><span>Conflicto entre compañeros · 3° A</span></div><span class="tag done">Atendida</span></div>
+            </div>
+          </article>
+          <article class="panel quick-panel">
+            <div class="panel-heading"><div><h3>Accesos rápidos</h3><p>Acciones frecuentes</p></div></div>
+            <button class="quick-action" data-go="report"><span class="quick-icon">＋</span><span><strong>Registrar incidencia</strong><small>Captura una situación ocurrida</small></span><b>›</b></button>
+            <button class="quick-action" data-go="students"><span class="quick-icon">♙</span><span><strong>Consultar alumnos</strong><small>Busca un expediente individual</small></span><b>›</b></button>
+            <button class="quick-action" data-go="followup"><span class="quick-icon">☷</span><span><strong>Dar seguimiento</strong><small>Revisa casos pendientes</small></span><b>›</b></button>
+          </article>
+        </div>
+        <p class="disclaimer">Esta es una maqueta de navegación. No guarda información ni tiene autenticación habilitada.</p>
+      </section>
+
+      <section class="view" id="report">
+        <div class="section-intro"><div><h2>Nuevo reporte</h2><p>Registra los hechos de manera clara, objetiva y respetuosa.</p></div><span class="pill blue-pill">Formulario de prueba</span></div>
+        <form class="panel form-panel" id="reportForm">
+          <div class="form-grid">
+            <label>Fecha de la incidencia<input type="date" id="incidentDate" required></label>
+            <label>Hora aproximada<input type="time" required></label>
+            <label>Grado y grupo<select required><option value="">Seleccionar grupo</option><option>1° A</option><option>1° B</option><option>1° C</option><option>2° A</option><option>2° B</option><option>3° A</option></select></label>
+            <label>Alumno<input placeholder="Buscar por nombre o matrícula" required></label>
+            <label>Materia<select required><option value="">Seleccionar materia</option><option>Español</option><option>Matemáticas</option><option>Biología</option><option>Historia</option><option>Formación Cívica y Ética</option><option>Geografía</option><option>Tecnología</option><option>Música</option><option>Artes</option><option>Socioemocional</option><option>Curricular</option><option>Deportes</option><option>Inglés</option></select></label>
+            <label>Tipo de incidencia<select required><option value="">Seleccionar categoría</option><option>Conducta disruptiva</option><option>Falta de respeto</option><option>Conflicto entre compañeros</option><option>Incumplimiento de acuerdos</option><option>Uso inadecuado de dispositivos</option><option>Daño a instalaciones o materiales</option><option>Situación de riesgo</option><option>Otra</option></select></label>
+            <label class="full">Descripción objetiva<textarea rows="4" placeholder="Describe qué ocurrió, cuándo y en qué contexto. Evita etiquetas o juicios personales." required></textarea></label>
+            <label>Acción inmediata<select><option>No aplica / ninguna</option><option>Diálogo con el alumno</option><option>Llamada de atención</option><option>Canalización a tutoría</option><option>Comunicación con familia</option></select></label>
+            <label>Prioridad<select><option>Ordinaria</option><option>Requiere atención pronta</option><option>Urgente: activar protocolo escolar</option></select></label>
+          </div>
+          <div class="form-actions"><span class="helper">Los campos se ajustarán a los protocolos de la escuela.</span><button class="primary-btn" type="submit">Guardar reporte de prueba</button></div>
+          <div class="success-message" id="formMessage" role="status"></div>
+        </form>
+      </section>
+
+      <section class="view" id="students">
+        <div class="section-intro"><div><h2>Directorio de alumnos</h2><p>Consulta el padrón y accede al historial de cada estudiante.</p></div><span class="pill blue-pill">Datos de ejemplo</span></div>
+        <div class="toolbar panel">
+          <input id="studentSearch" placeholder="Buscar alumno..." aria-label="Buscar alumno">
+          <select id="groupFilter" aria-label="Filtrar por grupo"><option value="">Todos los grupos</option><option>1° A</option><option>1° B</option><option>1° C</option><option>2° A</option><option>3° A</option></select>
+        </div>
+        <div class="panel table-panel">
+          <div class="table-wrap"><table><thead><tr><th>Alumno</th><th>Grupo</th><th>Reportes</th><th>Estado</th><th></th></tr></thead>
+          <tbody id="studentRows">
+            <tr><td><strong>Alumno de ejemplo 01</strong><small>ID interno: DEMO-001</small></td><td>1° A</td><td><strong>4</strong></td><td><span class="tag pending">Pendiente</span></td><td><button class="text-btn" type="button" data-student="01">Ver historial</button></td></tr>
+            <tr><td><strong>Alumno de ejemplo 02</strong><small>ID interno: DEMO-002</small></td><td>1° B</td><td><strong>2</strong></td><td><span class="tag progress">En seguimiento</span></td><td><button class="text-btn" type="button" data-student="02">Ver historial</button></td></tr>
+            <tr><td><strong>Alumno de ejemplo 03</strong><small>ID interno: DEMO-003</small></td><td>1° C</td><td><strong>1</strong></td><td><span class="tag done">Atendida</span></td><td><button class="text-btn" type="button" data-student="03">Ver historial</button></td></tr>
+          </tbody></table></div>
+          <p class="empty-note" id="emptyStudents" hidden>No hay coincidencias en esta maqueta.</p>
+        </div>
+      </section>
+
+      <section class="view" id="followup">
+        <div class="section-intro"><div><h2>Seguimiento</h2><p>Organiza las intervenciones y acuerdos de tutoría.</p></div><span class="pill blue-pill">Ejemplos ficticios</span></div>
+        <div class="panel table-panel">
+          <div class="table-wrap"><table><thead><tr><th>Alumno</th><th>Grupo</th><th>Incidencia</th><th>Última acción</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Alumno de ejemplo 01</strong></td><td>1° A</td><td>Conducta disruptiva</td><td>Entrevista con alumno</td><td><span class="tag pending">Pendiente</span></td></tr>
+            <tr><td><strong>Alumno de ejemplo 02</strong></td><td>2° B</td><td>Uso de dispositivos</td><td>Acuerdo de mejora</td><td><span class="tag progress">En seguimiento</span></td></tr>
+            <tr><td><strong>Alumno de ejemplo 03</strong></td><td>3° A</td><td>Conflicto entre compañeros</td><td>Diálogo restaurativo</td><td><span class="tag done">Atendida</span></td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="panel followup-note"><strong>Regla de contabilización</strong><p>Un reporte corresponde a un hecho registrado. Las entrevistas, llamadas y acuerdos se guardan como seguimientos vinculados y no incrementan el contador de incidencias.</p></div>
+      </section>
+      <footer> SIGE · Prototipo de interfaz · No utilizar para registrar datos reales todavía.</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
